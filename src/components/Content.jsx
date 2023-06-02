@@ -1,4 +1,5 @@
 import { useState ,React } from 'react'
+// import FatrashAlt from '../../node_modules/react-icons/Fa'
 
 const Content = () => {
     const [items, setItems] = useState([
@@ -22,13 +23,14 @@ const Content = () => {
     <main>
         {
             items.map((item) => (
-                <li className='item' key={item.id}>
+                <li className='item m-2' key={item.id}>
                     <input 
                       type="checkbox"
                       checked={item.checked}  
                     />
                     <label>{item.item}</label>
                     <button className='btn btn-danger btn-sm'>Delete</button>
+                    {/* <FatrashAlt role="button" tabIndex="0" /> */}
                 </li>
             ))
         }
